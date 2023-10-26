@@ -25,7 +25,17 @@ namespace AnomalyMod
                 {
                     foreach (var obj in anomaly.Objects)
                     {
-                        Vector3 objectPos = obj.transform.position;
+                        Vector3 objectPos;
+                        var collider = obj.GetComponent<Collider>();
+                        if (collider != null)
+                        {
+                            objectPos = collider.bounds.center;
+                        }
+                        else
+                        {
+                            objectPos = obj.transform.position;
+                        }
+
                         Vector3 objectFootPos; objectFootPos.x = objectPos.x; objectFootPos.z = objectPos.z; objectFootPos.y = objectPos.y - 0.2f; //At the feet
                         Vector3 objectHeadPos; objectHeadPos.x = objectPos.x; objectHeadPos.z = objectPos.z; objectHeadPos.y = objectPos.y + 0.2f; //At the head
 
@@ -36,9 +46,8 @@ namespace AnomalyMod
                         if (w2s_footpos.z > 0f)
                         {
                             DrawBoxESP(w2s_footpos, w2s_headpos, Color.red);
+                            GUI.Label(new Rect(w2s_footpos.x, Screen.height - w2s_footpos.y, 1000, 100), anomaly.AnomalyType);
                         }
-
-                        GUI.Label(new Rect(w2s_footpos.x, Screen.height - w2s_footpos.y, 1000, 100), anomaly.AnomalyType);
                     }
                 }
             }
@@ -65,11 +74,13 @@ namespace AnomalyMod
             }
             else
             {
+                GUI.Label(new Rect(10, 40, 1000, 20), "Active anomalies:");
                 int activeCount = 0;
                 foreach (var anomaly in anomalies)
                 {
                     if (anomaly.Active)
                     {
+                        GUI.Label(new Rect(10, 60 + (activeCount * 20), 1000, 20), anomaly.AnomalyType + " in " + anomaly.Room);
                         activeCount++;
                     }
                 }
@@ -83,8 +94,6 @@ namespace AnomalyMod
                     GUI.Label(new Rect(10, 20, 1000, 20), activeCount + " active anomalies");
                 }
             }
-
-            GUI.Label(new Rect(10, 40, 1000, 20), "Anomaly Timer:" + manager.Timer);
         }
 
         public void DrawBoxESP(Vector3 footpos, Vector3 headpos, Color color) //Rendering the ESP
