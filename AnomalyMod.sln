@@ -3,18 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnomalyMod", "AnomalyMod.csproj", "{45374F18-10C3-46F9-97D0-8A8209F9BE3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnomalyMod", "AnomalyMod.csproj", "{45374F18-10C3-46F9-97D0-8A8209F9BE3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{45374F18-10C3-46F9-97D0-8A8209F9BE3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{45374F18-10C3-46F9-97D0-8A8209F9BE3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45374F18-10C3-46F9-97D0-8A8209F9BE3C}.Debug|x64.ActiveCfg = Debug|x64
+		{45374F18-10C3-46F9-97D0-8A8209F9BE3C}.Debug|x64.Build.0 = Debug|x64
 		{45374F18-10C3-46F9-97D0-8A8209F9BE3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45374F18-10C3-46F9-97D0-8A8209F9BE3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45374F18-10C3-46F9-97D0-8A8209F9BE3C}.Release|x64.ActiveCfg = Release|x64
+		{45374F18-10C3-46F9-97D0-8A8209F9BE3C}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
