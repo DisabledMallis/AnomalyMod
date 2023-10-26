@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnomalyMod", "AnomalyMod.csproj", "{45374F18-10C3-46F9-97D0-8A8209F9BE3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45374F18-10C3-46F9-97D0-8A8209F9BE3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45374F18-10C3-46F9-97D0-8A8209F9BE3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45374F18-10C3-46F9-97D0-8A8209F9BE3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45374F18-10C3-46F9-97D0-8A8209F9BE3C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B601196F-33BD-4FC8-B29A-3165159B117C}
+	EndGlobalSection
+EndGlobal
